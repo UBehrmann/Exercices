@@ -1,25 +1,25 @@
 #include <iostream>
 
-#include "C:\Projects\c plus plus\Exercices\annexe.h"
+#include "D:\C++ Projects\Exercices\annexe.h""
 
 using namespace std;
 
 int main() {
 
-    char charactere;
+    char caractere;
 
-    charactere = saisieCharactere("Entrez un caractere :");
+    caractere = saisieCharactere("Entrez un caractere :");
 
-    cout << "Code ASCII de 'a' : " << (int)charactere << endl;
+    cout << "Code ASCII de 'a' : " << (int)caractere << endl;
 
-    cout << "'" << charactere << "' est une lettre de l'alphabet    : " <<
-    vraiFaux(isalpha (charactere)) << endl;
-    cout << "'" << charactere << "' est une lettre minuscule        : " <<
-    vraiFaux(islower(charactere)) << endl;
-    cout << "'" << charactere << "' est un chiffre                  : " <<
-    vraiFaux(isdigit(charactere)) << endl;
-    cout << "'" << charactere << "' est un caractere de ponctuation : " <<
-    vraiFaux(ispunct(charactere)) << endl;
+    cout << "'" << caractere << "' est une lettre de l'alphabet    : " <<
+         vraiFaux(isalpha (caractere)) << endl;
+    cout << "'" << caractere << "' est une lettre minuscule        : " <<
+         vraiFaux(islower(caractere)) << endl;
+    cout << "'" << caractere << "' est un chiffre                  : " <<
+         vraiFaux(isdigit(caractere)) << endl;
+    cout << "'" << caractere << "' est un caractere de ponctuation : " <<
+         vraiFaux(ispunct(caractere)) << endl;
 
     fin();
 
