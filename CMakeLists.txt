@@ -3,6 +3,7 @@ project(Exercices)
 
 set(CMAKE_CXX_STANDARD 20)
 
+
 add_executable(ex_ ex_.cpp template_H.h "ex_6/annexe.cpp" "ex_6/annexe.h")
 add_executable(ex_3_08 ex_3/ex_3_08.cpp)
 add_executable(ex_3_10 ex_3/ex_3_10.cpp)
@@ -52,8 +53,4 @@ add_executable(ex_6_01 ex_6/ex_6_01.cpp "ex_6/annexe.cpp" "ex_6/annexe.h")
 add_executable(ex_6_04 ex_6/ex_6_04.cpp)
 add_executable(ex_6_07 ex_6/ex_6_07.cpp)
 add_executable(ex_6_08 ex_6/ex_6_08.cpp)
-
-
-
-
-
+add_executable(ex_6_09 ex_6/ex_6_09.cpp "ex_6/annexe.cpp" "ex_6/annexe.h")

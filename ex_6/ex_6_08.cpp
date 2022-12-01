@@ -4,6 +4,7 @@
 using namespace std;
 
 int romaineModerne(const string& nombre);
+int romainEntier(const char lettre);
 void test(const string& nombre);
 
 int main() {
@@ -38,30 +39,33 @@ void test(const string& nombre){
 
 int romaineModerne(const string& nombre){
     int nombreConvertie = 0;
-    int chiffre = 0;
     int chiffrePrecedant = 0;
 
     for (char chiffreRomain : nombre) {
-        switch (chiffreRomain) {
-            case 'M': chiffre = 1000; break;
-            case 'D': chiffre = 500; break;
-            case 'C': chiffre = 100; break;
-            case 'L': chiffre = 50; break;
-            case 'X': chiffre = 10; break;
-            case 'V': chiffre = 5; break;
-            case 'I': chiffre = 1; break;
-            default: chiffre = 0; break;
-        }
 
-        if (chiffrePrecedant < chiffre)
-            nombreConvertie += chiffre - chiffrePrecedant - chiffrePrecedant;
+
+        if (chiffrePrecedant < romainEntier(chiffreRomain))
+            nombreConvertie += romainEntier(chiffreRomain) - 2 * chiffrePrecedant;
         else
-            nombreConvertie += chiffre;
+            nombreConvertie += romainEntier(chiffreRomain);
 
-        chiffrePrecedant = chiffre;
+        chiffrePrecedant = romainEntier(chiffreRomain);
     }
 
     return nombreConvertie;
+}
+
+int romainEntier(const char lettre){
+    switch (lettre) {
+        case 'M': return 1000;
+        case 'D': return 500;
+        case 'C': return 100;
+        case 'L': return 50;
+        case 'X': return 10;
+        case 'V': return 5;
+        case 'I': return 1;
+        default: return 0;
+    }
 }
 
 

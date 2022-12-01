@@ -20,15 +20,26 @@ using Vecteur = vector<int>;
 
 #define VIDER_BUFFER cin.ignore(numeric_limits<streamsize>::max(), '\n')
 
-char saisieCharactere(const string& MSG) {
+char saisieCharactere(const string& msg) {
 
     char saisie;                 // Variable de stockage de la saisie
-    bool erreur;                 // Variable de stockage de l'état de la saisie
 
     // Affichage message de demande de saisie
-    cout << MSG;
+    cout << msg;
 
-    // Vérifie si le flux est cassé ou si la valeur est en dehors des valeurs minimum et maximum
+    cin >> saisie;
+
+    VIDER_BUFFER;
+
+    return saisie;
+}
+
+string saisieString(const string& msg){
+    string saisie;                 // Variable de stockage de la saisie
+
+    // Affichage message de demande de saisie
+    cout << msg;
+
     cin >> saisie;
 
     VIDER_BUFFER;
@@ -61,4 +72,6 @@ string to_string(const Vecteur& vecteur){
         ss << vecteur[i];
     }
     ss << ']' << endl;
+
+    return ss.str();
 }

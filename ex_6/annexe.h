@@ -19,6 +19,7 @@ using Vecteur = std::vector<int>;
 
 
 char saisieCharactere(const std::string &MSG);
+std::string saisieString(const std::string& msg);
 
 void fin();
 
