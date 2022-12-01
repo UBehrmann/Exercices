@@ -10,6 +10,7 @@
 
 #include <string>
 #include <iostream>
+#include <sstream>
 #include <limits>       // Utilisation de numeric limits
 #include <vector>
 #include "annexe.h"
@@ -46,12 +47,18 @@ string vraiFaux(int valeur){
 }
 
 void afficheVecteur(const Vecteur& vecteur){
-    cout << '[';
+    cout << to_string(vecteur);
+}
+
+string to_string(const Vecteur& vecteur){
+    stringstream ss;
+
+    ss << '[';
     for (Vecteur::size_type i = 0; i < vecteur.size(); ++i) {
 
-        if(i != 0) cout << ", ";
+        if(i != 0) ss << ", ";
 
-        cout << vecteur[i];
+        ss << vecteur[i];
     }
-    cout << ']' << endl;
+    ss << ']' << endl;
 }

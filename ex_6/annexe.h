@@ -26,4 +26,6 @@ std::string vraiFaux(int valeur);
 
 void afficheVecteur(const Vecteur &vecteur);
 
+std::string to_string(const Vecteur& vecteur);
+
 #endif //EXERCICES_ANNEXE_H
