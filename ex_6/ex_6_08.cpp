@@ -43,7 +43,6 @@ int romaineModerne(const string& nombre){
 
     for (char chiffreRomain : nombre) {
 
-
         if (chiffrePrecedant < romainEntier(chiffreRomain))
             nombreConvertie += romainEntier(chiffreRomain) - 2 * chiffrePrecedant;
         else
