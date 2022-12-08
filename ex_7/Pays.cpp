@@ -14,3 +14,15 @@ Pays::Pays(const std::string &nom, int nombreHabitants, int superficie){
     this->nombreHabitants = nombreHabitants;
     this->superficie = superficie;
 }
+
+const std::string &Pays::getNom() const {
+    return nom;
+}
+
+int Pays::getNombreHabitants() const {
+    return nombreHabitants;
+}
+
+int Pays::getSuperficie() const {
+    return superficie;
+}

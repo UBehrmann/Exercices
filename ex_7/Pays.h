@@ -9,14 +9,23 @@
 
 class Pays {
 public:
-    std::string nom;
-    int nombreHabitants;
-    int superficie;
+
 
     Pays(const std::string &nom, int nombreHabitants, int superficie);
 
     float densite() const;
 private:
+public:
+    const std::string &getNom() const;
+
+    int getNombreHabitants() const;
+
+    int getSuperficie() const;
+
+private:
+    std::string nom;
+    int nombreHabitants;
+    int superficie;
 
 };
 

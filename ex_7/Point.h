@@ -14,9 +14,10 @@ public:
     float abscisse() const;
     float ordonnee() const;
 
+
+private:
     float x;
     float y;
-private:
 
 };
 
