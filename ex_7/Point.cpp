@@ -12,7 +12,6 @@ Point::Point(float xRecu, float yRecu){
 
     x = xRecu;
     y = yRecu;
-
 }
 
 void Point::translation(float xRecu, float yRecu) {
