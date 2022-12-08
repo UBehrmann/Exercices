@@ -31,3 +31,7 @@ float Point::abscisse() const {
 float Point::ordonnee() const {
     return y;
 }
+
+Point Point::somme(const Point &point) {
+    return Point(point.x + x, point.y + y);
+}

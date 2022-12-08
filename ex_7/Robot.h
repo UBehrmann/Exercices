@@ -8,7 +8,7 @@
 
 class Robot {
 public:
-    Robot(int posX = 0);
+    explicit Robot(int posX = 0);
 
     void deplacer();
     void faireDemiTour();

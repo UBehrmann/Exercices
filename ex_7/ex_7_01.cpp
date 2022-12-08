@@ -14,9 +14,12 @@ int main() {
 
     point.affiche();
 
-    Point point2(1.2f, 4.4f);
+    Point point2(1.2f, -4.4f);
 
-    cout << "( " << point2.abscisse() << " ; " << point2.ordonnee() << " )" << endl;
+    point2.affiche();
+
+    // Ex 7.5
+    point.somme(point2).affiche();
 
     return EXIT_SUCCESS;
 }
