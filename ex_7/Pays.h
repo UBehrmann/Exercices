@@ -9,17 +9,15 @@
 
 class Pays {
 public:
-
-
+    // Constructeur
     Pays(const std::string &nom, int nombreHabitants, int superficie);
 
+    // Fonctions
     float densite() const;
-private:
-public:
+
+    // Getter
     const std::string &getNom() const;
-
     int getNombreHabitants() const;
-
     int getSuperficie() const;
 
 private:
@@ -28,6 +26,5 @@ private:
     int superficie;
 
 };
-
 
 #endif //EXERCICES_PAYS_H
