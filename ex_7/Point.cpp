@@ -3,6 +3,9 @@
 //
 
 #include <iostream>
+#include <math.h>
+#include <iomanip>
+#include <complex>
 
 #include "Point.h"
 
@@ -21,7 +24,7 @@ void Point::translation(float xRecu, float yRecu) {
 
 void Point::affiche() const {
 
-    cout << "( " << x << " ; " << y << " )" << endl;
+    cout << setprecision(3) << "( " << x << " ; " << y << " )" << endl;
 }
 
 float Point::abscisse() const {
@@ -32,6 +35,27 @@ float Point::ordonnee() const {
     return y;
 }
 
-Point Point::somme(const Point &point) {
+Point Point::somme(const Point &point) const {
     return Point(point.x + x, point.y + y);
+}
+
+void Point::rotation(float radians) {
+    float ancienX = this->x;
+    float ancienY = this->y;
+
+    this->x = ( ancienX * cos(radians) ) - ( ancienY * sin(radians) );
+    this->y = ( ancienX * sin(radians) ) + ( ancienY * cos(radians) );
+}
+
+void Point::setPoint(float x, float y) {
+    this->x = x;
+    this->y = y;
+}
+
+Point Point::coordonneesPolaire(float rho, float theta) {
+
+    // Calculate the complex number in polar form using polar
+    complex<double> z = polar(rho, theta);
+
+    return Point(z.real(), z.imag());
 }
