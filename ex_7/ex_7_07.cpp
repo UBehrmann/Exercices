@@ -10,8 +10,29 @@ public:
         return chiffre == c2.getChiffre();
     }
 
-    c operator!=(const C c2){
-        return !(chiffre == c2.getChiffre());
+    bool operator!=(const C c2){
+        return chiffre != c2.getChiffre();
+    }
+
+    C& operator++(){
+        ++chiffre;
+        return *this;
+    }
+
+    C operator++(int){
+        C old = *this;
+        ++chiffre;
+        return old;
+    }
+
+    friend C operator+(C C1, const C& C2){
+        C1.chiffre += C2.chiffre;
+        return C1;
+    }
+
+    C operator+=(const C& C2){
+        chiffre += C2.chiffre;
+        return *this;
     }
 
 
