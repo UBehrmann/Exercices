@@ -64,3 +64,5 @@ add_executable(ex_7_03 ex_7/ex_7_03.cpp ex_7/Pays.cpp ex_7/Pays.h)
 add_executable(ex_7_04 ex_7/ex_7_04.cpp ex_7/Robot.cpp ex_7/Robot.h)
 add_executable(ex_7_07 ex_7/ex_7_07.cpp)
 add_executable(ex_7_08 ex_7/ex_7_08.cpp ex_7/Objet.h)
+add_executable(ex_7_09 ex_7/ex_7_09.cpp)
+
